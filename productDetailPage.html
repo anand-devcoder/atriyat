@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atriyat Atras – Manufacturer & Seller</title>
+    <link rel="icon" href="images/atriyat-logo-removebg-preview.png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans&display=swap"
+        rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-white text-black">
+
+    <!-- Navbar -->
+    <nav id="navbar"
+        class="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-purple-50 via-yellow-50 to-orange-50 shadow text-sm">
+        <div class="flex justify-between items-center px-4 py-2">
+            <div class="flex items-center gap-2 hover:text-purple-600 cursor-pointer" id="search-trigger">
+                <svg class="w-7 h-7 text-gray-700" fill="none" stroke="currentColor" stroke-width="2"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M21 21l-4.35-4.35M16 10a6 6 0 11-12 0 6 6 0 0112 0z" />
+                </svg>
+                <span class="text-2xl text-gray-700 hover:text-purple-600">Search</span>
+            </div>
+
+            <div class="flex items-center gap-2">
+                <img src="images/home/flower-1-300x300-removebg-preview.png" alt="Logo" class="w-24 h-20">
+                <span class="text-5xl font-bold text-black-800">ATRIYAT</span>
+            </div>
+
+            <div class="flex items-center gap-5">
+                <svg class="w-7 h-7 text-gray-700 hover:text-purple-600 cursor-pointer" fill="none"
+                    stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M5.121 17.804A9 9 0 0112 15a9 9 0 016.879 2.804M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                <svg class="w-7 h-7 text-gray-700 hover:text-purple-600 cursor-pointer" fill="none"
+                    stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M4.318 6.318A4.5 4.5 0 0112 6.318a4.5 4.5 0 017.682 5.364L12 21l-7.682-9.318a4.5 4.5 0 010-5.364z" />
+                </svg>
+                <svg id="cart-svg-icon" class="w-7 h-7 text-gray-700 hover:text-purple-600 cursor-pointer" fill="none"
+                    stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.5 7.5a1 1 0 001 1.5h12a1 1 0 001-1.5L17 13M7 13H5.4" />
+                </svg>
+            </div>
+        </div>
+
+        <div class="w-full flex justify-center py-2">
+            <ul class="flex gap-8 uppercase text-2xl text-gray-700">
+                <li><a href="index.html" class="hover:text-purple-600 text-purple-600 font-bold">Home</a></li>
+                <li><a href="productPage.html" class="hover:text-purple-600 text-purple-600 font-bold">Fragances</a></li>
+                <li><a href="blogPage.html" class="hover:text-purple-600 text-purple-600 font-bold">Blogs</a></li>
+                <li><a href="workshopPage.html" class="hover:text-purple-600 text-purple-600 font-bold">Workshops</a></li>
+                <li><a href="cYOF_FirstPage.html" class="hover:text-purple-600 text-purple-600 font-bold">CYOF</a></li>
+                <li><a href="aboutFounder.html" class="hover:text-purple-600 text-purple-600 font-bold">About Us</a></li>
+                <li><a href="contactUs.html" class="hover:text-purple-600 text-purple-600 font-bold">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Search Overlay -->
+    <div id="search-box" class="search-box bg-gradient-to-r from-purple-50 via-yellow-50 to-orange-50">
+        <div class="search-content">
+            <div class="close-btn" id="close-search">✖</div>
+            <h2 class="text-xl text-gray-600 uppercase tracking-widest mb-2">What are you looking for?</h2>
+            <div class="relative w-full ">
+                <!-- Input field -->
+                <input type="text"
+                    class="search-input bg-transparent w-full text-gray-800 placeholder-gray-600 pr-10 pl-4 py-2 rounded-md border-b border-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-300"
+                    placeholder="Search..." />
+
+                <!-- SVG Icon (Search) -->
+                <svg class="w-5 h-5 absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-600 pointer-events-none"
+                    fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M21 21l-4.35-4.35M16 10a6 6 0 11-12 0 6 6 0 0112 0z" />
+                </svg>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Cart Container -->
+    <div id="cart-container"></div>
+
+    <!-- Product Detail Page-->
+    <section class="flex flex-col md:flex-row py-5 bg-gradient-to-b from-purple-100 to-yellow-100 text-black relative"
+        style="margin-top: 145px;">
+
+        <!-- Left Section (Thumbnail Gallery + Main Image in a row) -->
+        <section class="w-full md:w-2/3 flex space-x-4 ml-4">
+            <!-- Reduced space-x-10 to space-x-4 to decrease space between sections -->
+
+            <!-- Thumbnail Gallery Section -->
+            <section class="thumbnail-gallery-section w-1/6 relative flex flex-col items-center">
+                <!-- Scroll Up Button -->
+                <button onclick="scrollThumbnails(-1)" class="arrow-btn mb-2">
+                    <!-- Inline SVG inside button -->
+                    <svg width="24px" height="24px" viewBox="0 -19.04 75.803 75.803" xmlns="http://www.w3.org/2000/svg"
+                        fill="#0c2c67">
+                        <g id="SVGRepo_iconCarrier">
+                            <g id="Group_66" transform="translate(-619.375 -560.018)">
+                                <path id="Path_58"
+                                    d="M695.178,596.248a1.5,1.5,0,0,1-2.561,1.061l-33.56-33.557a2.53,2.53,0,0,0-3.564,0l-33.558,33.557a1.5,1.5,0,0,1-2.121-2.121l33.557-33.557a5.531,5.531,0,0,1,7.808,0l33.559,33.557A1.494,1.494,0,0,1,695.178,596.248Z" />
+                            </g>
+                        </g>
+                    </svg>
+                </button>
+                <!-- Up arrow -->
+
+                <!-- Scrollable Thumbnails -->
+                <div id="thumbnailScrollWrapper" class="thumbnail-gallery overflow-hidden h-[440px] w-full relative">
+                    <div id="thumbnailContainer"
+                        class="flex flex-col space-y-4 transition-all duration-300 ease-in-out">
+                        <img src="images/home/ai-generated-luxury-perfume-bottle-scented-liquid-elegance-in-a-spray-generated-by-ai-free-photo.jpg"
+                            alt="Image 1" class="thumbnail" onclick="changeImage(this)">
+                        <img src="images/home/images.jpg" alt="Image 2" class="thumbnail" onclick="changeImage(this)">
+                        <img src="images/home/After_Shave.jpg" alt="Image 3" class="thumbnail"
+                            onclick="changeImage(this)">
+                        <img src="images/home/glass-perfume-bottle-golden-cap-600nw-2591229857.webp" alt="Image 4"
+                            class="thumbnail" onclick="changeImage(this)">
+                        <img src="images/home/ai-generated-luxury-perfume-bottle-scented-liquid-elegance-in-a-spray-generated-by-ai-free-photo.jpg"
+                            alt="Image 5" class="thumbnail" onclick="changeImage(this)">
+                        <img src="images/home/images.jpg" alt="Image 6" class="thumbnail" onclick="changeImage(this)">
+                        <img src="images/home/After_Shave.jpg" alt="Image 7" class="thumbnail"
+                            onclick="changeImage(this)">
+                        <img src="images/home/glass-perfume-bottle-golden-cap-600nw-2591229857.webp" alt="Image 8"
+                            class="thumbnail" onclick="changeImage(this)">
+                    </div>
+                </div>
+
+                <!-- Scroll Down Button -->
+                <button onclick="scrollThumbnails(1)" class="arrow-btn mt-2">
+                    <svg width="24px" height="24px" viewBox="0 -19.04 75.803 75.803" xmlns="http://www.w3.org/2000/svg"
+                        fill="#0c2c67" style="transform: rotate(180deg);">
+                        <g id="SVGRepo_iconCarrier">
+                            <g id="Group_66" transform="translate(-619.375 -560.018)">
+                                <path id="Path_58"
+                                    d="M695.178,596.248a1.5,1.5,0,0,1-2.561,1.061l-33.56-33.557a2.53,2.53,0,0,0-3.564,0l-33.558,33.557a1.5,1.5,0,0,1-2.121-2.121l33.557-33.557a5.531,5.531,0,0,1,7.808,0l33.559,33.557A1.494,1.494,0,0,1,695.178,596.248Z" />
+                            </g>
+                        </g>
+                    </svg>
+                </button>
+                <!-- Down arrow -->
+            </section>
+
+            <!-- Main Image Section -->
+            <section class="main-image-section w-[80%]"> <!-- Main image takes 3/4 of the left section width -->
+                <img id="main-image" src="images/home/After_Shave.jpg" alt="Main Image"
+                    class="w-full h-auto object-cover">
+            </section>
+
+        </section>
+
+        <!-- Right Section (Product Content) -->
+        <section class="md:w-[30%]"> <!-- Right section width set to 1/3 -->
+
+            <!-- Product Title -->
+            <div class="product-title text-4xl">BELLAVITA CEO Man</div>
+            <div id="descriptionText" class="description-text text-2xl">Long Lasting Perfume</div>
+
+            <!-- Product Description with Read More functionality -->
+            <div class="product-description">
+                <span id="readMoreBtn" class="read-more">More Details</span>
+            </div>
+
+            <!-- Price Range -->
+            <div class="price-range">₹199</div>
+
+            <!-- Select Size Box -->
+            <h3 class="size-heading">Unit</h3>
+            <div class="size-selector">
+                <div class="size-option" data-size="5 ml">5 ml</div>
+                <div class="size-option" data-size="10 ml">10 ml</div>
+                <div class="size-option" data-size="15 ml">15 ml</div>
+                <div class="size-option" data-size="20 ml">20 ml</div>
+                <div class="size-option" id="choose-multiple-size">Choose Multiple Units</div>
+            </div>
+
+            <!-- Quantity Selector -->
+            <h3 class="quantity-heading">Quantity</h3>
+            <div class="quantity-selector">
+                <button class="quantity-btn" id="decrease">-</button>
+                <input type="text" id="quantity" class="quantity-input" value="1" min="1" />
+                <button class="quantity-btn" id="increase">+</button>
+            </div>
+
+            <!-- List of Selected Sizes and Quantities -->
+            <div id="multiple-sizes-container" class="multiple-sizes-container" style="display:none;">
+                <h3>Selected Unit and Quantities</h3>
+                <ul id="selected-sizes-list">
+                    <!-- Selected sizes will be listed here -->
+                </ul>
+            </div>
+
+            <!-- Add to Bag Button -->
+            <button id="detailAddToCartBtn"
+                class="mt-4 w-full bg-black text-white py-2 text-xl font-semibold uppercase tracking-wide group-hover:block add-to-cart-btn">
+                Add To Cart
+            </button>
+        </section>
+
+    </section>
+
+    <!-- Product Detail Information Page-->
+    <section class="product-info-section bg-gradient-to-b from-yellow-100 to-orange-100 text-black relative">
+        <div class="container">
+            <h1 class="font-bold font-serif tracking-wide">PRODUCT INFORMATION</h1>
+
+            <!-- SECTION 1: DESCRIPTION -->
+            <section class="section">
+                <button class="accordion">
+                    DESCRIPTION
+                    <span class="arrow">
+                        <!-- Down Arrow by default -->
+                        <svg class="icon" width="20px" height="20px" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg" transform="matrix(1, 0, 0, -1, 0, 0)">
+                            <path d="M17 15L12 10L7 15" stroke="#000000" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </span>
+                </button>
+                <div class="panel">
+                    <h3>PRODUCT</h3>
+                    <p>COCO MADEMOISELLE. The essence of a bold and free woman. A feminine ambery fragrance with a
+                        strong personality and a surprising freshness.</p>
+                    <h3>COMPOSITION</h3>
+                    <p>COCO MADEMOISELLE Eau de Parfum is an ambery fragrance, a powerful and voluptuous scent. Sparks
+                        of fresh and vibrant orange immediately awaken the senses. A clear and sensual heart reveals the
+                        transparent accords of jasmine and rose. Finally, the trail unfurls with vibrant accents of
+                        Patchouli and Vetiver.</p>
+                    <h3>INSPIRATION</h3>
+                    <p>COCO MADEMOISELLE. A double name, a dual personality. Free and endearing, mischievous and
+                        provocative, lighthearted and excessive.</p>
+                    <h3>ART OF PERFUMING</h3>
+                    <p>The Eau de Parfum comes in a spray for easy application on the skin or inside clothing. A
+                        complete perfuming ritual for the bath and body is also available to enhance its trail.</p>
+                </div>
+            </section>
+
+            <!-- SECTION 2: ADDITIONAL INFO -->
+            <section class="section">
+                <button class="accordion">
+                    ADDITIONAL INFORMATION
+                    <span class="arrow">
+                        <!-- Down Arrow by default -->
+                        <svg class="icon" width="20px" height="20px" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg" transform="matrix(1, 0, 0, -1, 0, 0)">
+                            <path d="M17 15L12 10L7 15" stroke="#000000" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </span>
+                </button>
+                <div class="panel">
+                    <h3>SIZE</h3>
+                    <p>100 ml</p>
+                    <h3>PRECAUTIONS OF USE</h3>
+                    <p>Store away from direct sunlight. Use before 36 months from the date of manufacturing.</p>
+                    <h3>LIST OF INGREDIENTS</h3>
+                    <p>AQUA (WATER), LINALOOL, LIMONENE, BENZYL SALICYLATE, CITRONELLOL, GERANIOL, HEXYL CINNAMAL,
+                        COUMARIN, CITRAL, BENZYL ALCOHOL...</p>
+                    <p>Manufacturer: CHANEL S.A.S., France<br>Importer: CHANEL (INDIA) PRIVATE LIMITED, New Delhi, INDIA
+                    </p>
+                </div>
+            </section>
+
+            <!-- SECTION 3: REVIEWS -->
+            <section class="section">
+                <button class="accordion">
+                    REVIEWS
+                    <span class="arrow">
+                        <!-- Down Arrow by default -->
+                        <svg class="icon" width="20px" height="20px" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg" transform="matrix(1, 0, 0, -1, 0, 0)">
+                            <path d="M17 15L12 10L7 15" stroke="#000000" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </span>
+                </button>
+                <div class="panel">
+
+                    <!-- Rating Summary -->
+                    <div class="rating-block"
+                        style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;">
+                        <div style="display: flex; align-items: center; gap: 15px;">
+                            <div class="rating-score" style="font-size: 32px; font-weight: bold;">4.9</div>
+                            <div class="rating-stars" style="font-size: 20px;">★★★★★</div>
+                            <div class="rating-details" style="font-size: 14px; color: gray;">100 reviews</div>
+                        </div>
+                        <div>
+                            <select style="padding: 6px 10px; font-size: 14px;">
+                                <option>Sort by: Most recent</option>
+                                <option>Sort by: Highest rating</option>
+                                <option>Sort by: Lowest rating</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Write Review Button -->
+                    <div style="margin-top: 10px; margin-bottom: 30px;">
+                        <button id="writeReviewBtn" class="write-review">WRITE A REVIEW</button>
+                    </div>
+                    <!-- Review Modal -->
+                    <div id="reviewModal" class="modal">
+                        <div class="modal-content">
+                            <span class="close" id="closeModal">&times;</span>
+                            <h3>Write a Review</h3>
+                            <textarea id="reviewMessage" placeholder="Enter your review..."></textarea>
+                            <div class="stars" id="starRating">
+                                <span data-star="1">&#9734;</span>
+                                <span data-star="2">&#9734;</span>
+                                <span data-star="3">&#9734;</span>
+                                <span data-star="4">&#9734;</span>
+                                <span data-star="5">&#9734;</span>
+                            </div>
+                            <button id="submitReview">Submit Review</button>
+                        </div>
+                    </div>
+                    <!-- ✅ Add this new container for dynamic reviews -->
+                    <div id="reviewList" class="review-list"></div>
+                    <!-- Individual Review -->
+                    <div class="review"
+                        style="margin-bottom: 30px; border-bottom: 1px solid #ccc; padding-bottom: 20px;">
+                        <div style="display: flex; justify-content: space-between;">
+                            <strong>HAYLEY C</strong>
+                            <span style="font-size: 14px;">08/28/2025</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <span style="font-size: 14px; color: #222;">I bought this for my Mum as she always tells me
+                                how beautiful I smell...</span>
+                            <span style="font-size: 18px;">★★★★★</span>
+                        </div>
+                        <div style="font-size: 12px; color: gray; text-align: right;">Purchase date: 08/25/2025</div>
+                        <div style="font-size: 13px; margin-top: 5px;">Was this review helpful? <a href="#">Yes</a> <a
+                                href="#">No</a></div>
+                    </div>
+
+                    <!-- Another Review -->
+                    <div class="review"
+                        style="margin-bottom: 30px; border-bottom: 1px solid #ccc; padding-bottom: 20px;">
+                        <div style="display: flex; justify-content: space-between;">
+                            <strong>VICKI S</strong>
+                            <span style="font-size: 14px;">07/29/2025</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <span style="font-size: 14px; color: #222;">I have been wearing mademoiselle for at least 20
+                                years now...</span>
+                            <span style="font-size: 18px;">★★★★☆</span>
+                        </div>
+                        <div style="font-size: 12px; color: gray; text-align: right;">Purchase date: 07/25/2025</div>
+                        <div style="font-size: 13px; margin-top: 5px;">Was this review helpful? <a href="#">Yes</a> <a
+                                href="#">No</a></div>
+                    </div>
+
+                    <!-- Another Review -->
+                    <div class="review"
+                        style="margin-bottom: 30px; border-bottom: 1px solid #ccc; padding-bottom: 20px;">
+                        <div style="display: flex; justify-content: space-between;">
+                            <strong>LISA W</strong>
+                            <span style="font-size: 14px;">06/30/2025</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <span style="font-size: 14px; color: #222;">Beautiful perfume, lasts ages and feels like a
+                                luxury to wear 🧡</span>
+                            <span style="font-size: 18px;">★★★★★</span>
+                        </div>
+                        <div style="font-size: 12px; color: gray; text-align: right;">Purchase date: 06/25/2025</div>
+                        <div style="font-size: 13px; margin-top: 5px;">Was this review helpful? <a href="#">Yes</a> <a
+                                href="#">No</a></div>
+                    </div>
+
+                    <div id="reviewContainer"></div>
+
+                    <!-- Message container (initially hidden) -->
+                    <div id="noMoreMessage" class="w-full text-center mt-5 text-gray-500 text-base"
+                        style="display: none;">
+                        No more reviews to show.
+                    </div>
+
+                    <!-- View More Button -->
+                    <div style="width: 100%; text-align: center; margin-top: 20px;">
+                        <button id="viewMoreLink"
+                            style="background: none; border: none; color: blue; text-decoration: underline; cursor: pointer; font-size: 16px;">
+                            View more reviews
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 4: ONLINE ORDER -->
+            <section class="section">
+                <button class="accordion">
+                    ONLINE ORDER
+                    <span class="arrow">
+                        <!-- Down Arrow by default -->
+                        <svg class="icon" width="20px" height="20px" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg" transform="matrix(1, 0, 0, -1, 0, 0)">
+                            <path d="M17 15L12 10L7 15" stroke="#000000" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </span>
+                </button>
+                <div class="panel">
+                    <h3>DELIVERY</h3>
+                    <p>Orders placed through the CHANEL Online Boutique are uniquely packaged by CHANEL, and can be
+                        delivered in India only.</p>
+
+                    <h3>RETURNS</h3>
+                    <p>Returns allowed within 14 days of receiving for unused products. Email: <a
+                            href="mailto:clientcare.india@chanel.com">clientcare.india@chanel.com</a></p>
+
+                    <h3>PAYMENT</h3>
+                    <p>We accept VISA, MasterCard, American Express, Net Banking. Payment is protected using Secure
+                        Sockets Layer (SSL) technology.</p>
+                </div>
+            </section>
+
+        </div>
+    </section>
+
+    <!-- Perfect Match Section-->
+    <section class="text-center bg-gradient-to-b from-orange-100 to-pink-100 text-black relative">
+        <h2 class="perfect-match">THE PERFECT MATCH</h2>
+
+        <div class="relative w-full max-w-7xl mx-auto overflow-hidden">
+            <!-- Product slider wrapper -->
+            <div id="slider" class="flex transition-transform duration-500 ease-in-out"
+                style="transform: translateX(0%);">
+
+                <!-- Slide 1 -->
+                <div class="flex justify-center space-x-8 w-full shrink-0">
+                    <!-- Product 1 -->
+                    <a href="productDetailPage.html" class="block w-1/4">
+                        <div class="relative p-4 group border border-transparent hover:border-black transition">
+                            <button class="absolute top-2 right-2 text-gray-600 hover:text-red-500 text-xl">♡</button>
+                            <img src="images/product/After_Shave.jpg"
+                                class="product-image w-full h-64 object-contain" />
+                            <div class="text-center mt-4 group-hover:border-t-2 group-hover:border-black text-2xl">
+                                <h4 class="font-bold tracking-wide">BELLAVITA CEO Man</h4>
+                                <p class="text-xl text-gray-600">Long Lasting Perfume</p>
+                                <p class="font-semibold mt-1">₹199</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Product 2 -->
+                    <a href="productDetailPage.html" class="block w-1/4">
+                        <div class="relative p-4 group border border-transparent hover:border-black transition">
+                            <button class="absolute top-2 right-2 text-gray-600 hover:text-red-500 text-xl">♡</button>
+                            <img src="images/home/banner1.jpg" class="product-image w-full h-64 object-contain" />
+                            <div class="text-center mt-4 group-hover:border-t-2 group-hover:border-black text-2xl">
+                                <h4 class="font-bold tracking-wide">COCO MADEMOISELLE</h4>
+                                <p class="text-xl text-gray-600">Silky Body Cream</p>
+                                <p class="font-semibold mt-1">₹9,100</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Product 3 -->
+                    <a href="productDetailPage.html" class="block w-1/4">
+                        <div class="relative p-4 group border border-transparent hover:border-black transition">
+                            <button class="absolute top-2 right-2 text-gray-600 hover:text-red-500 text-xl">♡</button>
+                            <img src="images/home/file.jpg" class="product-image w-full h-64 object-contain" />
+                            <div class="text-center mt-4 group-hover:border-t-2 group-hover:border-black text-2xl">
+                                <h4 class="font-bold tracking-wide">HYDRA MICRO SERUM</h4>
+                                <p class="text-xl text-gray-600">Intense Hydration</p>
+                                <p class="font-semibold mt-1">₹5,550</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="flex justify-center space-x-8 w-full shrink-0">
+                    <!-- Product 4 -->
+                    <a href="productDetailPage.html" class="block w-1/4">
+                        <div class="relative p-4 group border border-transparent hover:border-black transition">
+                            <button class="absolute top-2 right-2 text-gray-600 hover:text-red-500 text-xl">♡</button>
+                            <img src="images/home/Best-Womens-Fragrances-for-Every-Occasion.jpg"
+                                class="product-image w-full h-64 object-contain" />
+                            <div class="text-center mt-4 group-hover:border-t-2 group-hover:border-black text-2xl">
+                                <h4 class="font-bold tracking-wide">COCO Hair Perfume</h4>
+                                <p class="text-xl text-gray-600">Elegant Fragrance</p>
+                                <p class="font-semibold mt-1">₹6,900</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Product 5 -->
+                    <a href="productDetailPage.html" class="block w-1/4">
+                        <div class="relative p-4 group border border-transparent hover:border-black transition">
+                            <button class="absolute top-2 right-2 text-gray-600 hover:text-red-500 text-xl">♡</button>
+                            <img src="images/home/banner1.jpg" class="product-image w-full h-64 object-contain" />
+                            <div class="text-center mt-4 group-hover:border-t-2 group-hover:border-black text-2xl">
+                                <h4 class="font-bold tracking-wide">Moisture Serum</h4>
+                                <p class="text-xl text-gray-600">Deep Hydration</p>
+                                <p class="font-semibold mt-1">₹4,499</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Product 6 -->
+                    <a href="productDetailPage.html" class="block w-1/4">
+                        <div class="relative p-4 group border border-transparent hover:border-black transition">
+                            <button class="absolute top-2 right-2 text-gray-600 hover:text-red-500 text-xl">♡</button>
+                            <img src="images/home/images (1).jpg" class="product-image w-full h-64 object-contain" />
+                            <div class="text-center mt-4 group-hover:border-t-2 group-hover:border-black text-2xl">
+                                <h4 class="font-bold tracking-wide">Vitamin C Cream</h4>
+                                <p class="text-xl text-gray-600">Glow & Brighten</p>
+                                <p class="font-semibold mt-1">₹3,199</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Navigation Arrows -->
+            <!-- Left Arrow SVG Button -->
+            <button id="leftArrow" class="absolute left-0 top-1/2 transform -translate-y-1/2 hidden bg-transparent">
+                <svg width="64px" height="64px" viewBox="-12 -12 48.00 48.00" fill="none"
+                    xmlns="http://www.w3.org/2000/svg" transform="matrix(-1, 0, 0, -1, 0, 0)rotate(90)">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                        <path d="M17 15L12 10L7 15" stroke="#000000" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                    </g>
+                </svg>
+            </button>
+
+            <!-- Right Arrow SVG Button -->
+            <button id="rightArrow" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-transparent ">
+                <svg width="64px" height="64px" viewBox="-12 -12 48.00 48.00" fill="none"
+                    xmlns="http://www.w3.org/2000/svg" transform="matrix(1, 0, 0, 1, 0, 0)rotate(90)">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                        <path d="M17 15L12 10L7 15" stroke="#000000" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                    </g>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Pagination -->
+        <div class="mt-8 text-xl font-semibold" id="pagination">1 / 2</div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-black text-sm pt-12 pb-6 px-6 bg-soft-footer">
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-8 mb-10">
+            <div>
+                <h3 class="uppercase mb-2 font-bold text-3xl">Customer Service</h3>
+                <ul>
+                    <li class="text-2xl">
+                        <a href="faqs.html" class="hover:underline">FAQs</a>
+                    </li>
+                    <li class="text-2xl">
+                        <a href="fragrance-care.html" class="hover:underline">Fragrance Care</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="uppercase mb-2 font-bold text-3xl">About Atriyat</h3>
+                <ul>
+                    <li class="text-2xl">
+                        <a href="aboutFounder.html" class="hover:underline">About</a>
+                    </li>
+                    <li class="text-2xl">
+                        <a href="workshopPage.html" class="hover:underline">Workshops</a>
+                    </li>
+                    <li class="text-2xl">
+                        <a href="blogPage.html" class="hover:underline">Blogs</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="uppercase mb-2 font-bold text-3xl">Legal</h3>
+                <ul>
+                    <li class="text-2xl">
+                        <a href="blogPage.html" class="hover:underline">Privacy Policy</a>
+                    </li>
+                    <li class="text-2xl">
+                        <a href="blogPage.html" class="hover:underline">Terms & Conditions</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="uppercase mb-2 font-bold text-3xl">Follow Us</h3>
+                <div class="flex gap-4 mt-3">
+                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" class="w-8" /></a>
+                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" class="w-8" /></a>
+                </div>
+            </div>
+            <div>
+                <h3 class="uppercase mb-2 font-bold text-3xl">Newsletter</h3>
+                <p class="text-2xl mb-3">Get early access to collections, offers, and Atra workshops</p>
+                <div class="flex">
+                    <input type="email" placeholder="Enter your email"
+                        class="px-6 py-2 w-full text-2xl border border-gray-200 bg-transparent text-black placeholder-black rounded-l-md focus:outline-none">
+                    <button
+                        class="px-4 py-2 bg-purple-700 text-white uppercase text-xl rounded-r-md hover:bg-purple-900">→</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-lg text-center mt-8">© 2025 Atriyat. All Rights Reserved.</div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

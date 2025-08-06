@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atriyat Atras – Manufacturer & Seller</title>
+    <link rel="icon" href="images/atriyat-logo-removebg-preview.png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans&display=swap"
+        rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-white text-black">
+
+    <!-- Navbar -->
+    <nav id="navbar"
+        class="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-purple-50 via-yellow-50 to-orange-50 shadow text-sm">
+        <div class="flex justify-between items-center px-4 py-2">
+            <div class="flex items-center gap-2 hover:text-purple-600 cursor-pointer" id="search-trigger">
+                <svg class="w-7 h-7 text-gray-700" fill="none" stroke="currentColor" stroke-width="2"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M21 21l-4.35-4.35M16 10a6 6 0 11-12 0 6 6 0 0112 0z" />
+                </svg>
+                <span class="text-2xl text-gray-700 hover:text-purple-600">Search</span>
+            </div>
+
+            <div class="flex items-center gap-2">
+                <img src="images/home/flower-1-300x300-removebg-preview.png" alt="Logo" class="w-24 h-20">
+                <span class="text-5xl font-bold text-black-800">ATRIYAT</span>
+            </div>
+
+            <div class="flex items-center gap-5">
+                <svg class="w-7 h-7 text-gray-700 hover:text-purple-600 cursor-pointer" fill="none"
+                    stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M5.121 17.804A9 9 0 0112 15a9 9 0 016.879 2.804M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                <svg class="w-7 h-7 text-gray-700 hover:text-purple-600 cursor-pointer" fill="none"
+                    stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M4.318 6.318A4.5 4.5 0 0112 6.318a4.5 4.5 0 017.682 5.364L12 21l-7.682-9.318a4.5 4.5 0 010-5.364z" />
+                </svg>
+                <svg id="cart-svg-icon" class="w-7 h-7 text-gray-700 hover:text-purple-600 cursor-pointer" fill="none"
+                    stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.5 7.5a1 1 0 001 1.5h12a1 1 0 001-1.5L17 13M7 13H5.4" />
+                </svg>
+            </div>
+        </div>
+
+        <div class="w-full flex justify-center py-2">
+            <ul class="flex gap-8 uppercase text-2xl text-gray-700">
+                <li><a href="index.html" class="hover:text-purple-600 text-purple-600 font-bold">Home</a></li>
+                <li><a href="productPage.html" class="hover:text-purple-600 text-purple-600 font-bold">Fragances</a></li>
+                <li><a href="blogPage.html" class="hover:text-purple-600 text-purple-600 font-bold">Blogs</a></li>
+                <li><a href="workshopPage.html" class="hover:text-purple-600 text-purple-600 font-bold">Workshops</a></li>
+                <li><a href="cYOF_FirstPage.html" class="hover:text-purple-600 text-purple-600 font-bold">CYOF</a></li>
+                <li><a href="aboutFounder.html" class="hover:text-purple-600 text-purple-600 font-bold">About Us</a></li>
+                <li><a href="contactUs.html" class="hover:text-purple-600 text-purple-600 font-bold">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Search Overlay -->
+    <div id="search-box" class="search-box bg-gradient-to-r from-purple-50 via-yellow-50 to-orange-50">
+        <div class="search-content">
+            <div class="close-btn" id="close-search">✖</div>
+            <h2 class="text-xl text-gray-600 uppercase tracking-widest mb-2">What are you looking for?</h2>
+            <div class="relative w-full ">
+                <!-- Input field -->
+                <input type="text"
+                    class="search-input bg-transparent w-full text-gray-800 placeholder-gray-600 pr-10 pl-4 py-2 rounded-md border-b border-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-300"
+                    placeholder="Search..." />
+
+                <!-- SVG Icon (Search) -->
+                <svg class="w-5 h-5 absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-600 pointer-events-none"
+                    fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M21 21l-4.35-4.35M16 10a6 6 0 11-12 0 6 6 0 0112 0z" />
+                </svg>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Blog Detail Section -->
+    <section class="bg-gradient-to-b from-yellow-100 to-orange-100 text-black py-16">
+        <h2 class="text-5xl font-semibold mb-8 text-center uppercase">Our Atra Blog</h2>
+
+        <!-- Bolg Heading Section -->
+        <section class="pt-8 bg-white text-black bg-gradient-to-b from-purple-300 to-yellow-100">
+            <div class="mt-0 pt-0 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <!-- Image -->
+                <div>
+                    <img src="images/blogDetail/ai-generated-luxury-perfume-bottle-scented-liquid-elegance-in-a-spray-generated-by-ai-free-photo.jpg"
+                        alt="Perfume Bottle" class="w-[900px] h-[415px] object-cover rounded shadow-md ml-20">
+                </div>
+
+                <!-- Text Content -->
+                <div class="h-[350px] mr-16">
+                    <h2 class="text-5xl font-bold mb-6 text-center">The Art of Making Atra</h2>
+                    <p class="text-2xl leading-relaxed mb-6 text-center">25 July, 2025</p>
+                    <p class="text-2xl leading-relaxed text-justify">
+                        <b>"The Art of Making Atra"</b> combines creativity with traditional craftsmanship, focusing on
+                        both
+                        technical skill and cultural expression. It involves carefully selecting materials that hold
+                        aesthetic and symbolic significance, shaping each piece to reflect deeper meanings. While rooted
+                        in tradition, modern artists innovate, blending old techniques with new ideas.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bolg Detail Section -->
+        <section class="max-w-16xl mx-auto px-6 py-10 space-y-10 font-serif text-gray-800">
+            <!-- Heading -->
+            <div class="text-center">
+                <p class="mt-2 text-3xl leading-relaxed text-black-600 font-bold">
+                    Discover the creative process, meaning, and inspiration behind Atra through a few powerful lines
+                    that invite your audience to explore more.
+                </p>
+            </div>
+
+            <!-- Main Image -->
+            <div class="flex justify-center">
+                <img src="images/blogDetail/IMG-20220626-WA0007.jpg" alt="Book in Hand"
+                    class="rounded-lg shadow-md w-[1400px] h-[600px] object-cover">
+            </div>
+
+            <!-- Intro -->
+            <div class="text-2xl text-black-700 text-center ml-[155px] mr-[156px]">
+                <p>
+                    Welcome to your journey into The Art of Making Atra. This space is crafted to inspire and engage
+                    those curious about the creative process behind Atra — where tradition meets innovation. Think of it
+                    as an evolving narrative that explores the techniques, stories, and inspirations that shape every
+                    detail of Atra.
+                </p>
+            </div>
+
+            <!-- Quote Block -->
+            <blockquote
+                class="border-l-4 border-blue-500 pl-4 italic text-black-600 text-2xl text-justify ml-[225px] mr-[175px]">
+                "Do you have a vision for Atra? Whether you embrace bold, modern artistry or a timeless, refined
+                aesthetic — there’s an Atra creation waiting to reflect your unique elegance."
+            </blockquote>
+
+            <!-- Section: Crafting Atra with Precision -->
+            <div>
+                <h2 class="font-bold text-2xl mb-2 ml-[155px]">Crafting Atra with Precision</h2>
+                <blockquote
+                    class="border-l-4 border-blue-500 pl-4 italic text-black-600 text-2xl text-justify ml-[225px] mr-[180px]">
+                    Every creation under The Art of Making Atra embodies modern expression and connection. Whether it's
+                    shared across platforms or experienced in person, each piece inspires engagement, sparks
+                    conversation, and deepens the bond with a growing creative community.
+                </blockquote>
+            </div>
+
+            <!-- Section: Master the Art of Crafting Atra -->
+            <div>
+                <h2 class="font-bold text-2xl mb-2 ml-[155px]">Master the Art of Crafting Atra</h2>
+                <blockquote
+                    class="border-l-4 border-blue-500 pl-4 italic text-black-600 text-2xl text-justify ml-[225px] mr-[180px]">
+                    Creating Atra isn’t just about crafting a product — it’s about curating an experience. Organizing
+                    your creative vision into distinct categories helps your audience connect with the essence of Atra,
+                    whether it’s through fashion, storytelling, or design. Each piece reflects a fully customizable
+                    journey — from bold titles and expressive visuals to thoughtful narratives. Highlight your process,
+                    connect with your platforms, and let your homepage tell the story of your art.
+                </blockquote>
+            </div>
+
+            <!-- Section: Mastering the Art of Atra -->
+            <div>
+                <h2 class="font-bold text-2xl mb-2 ml-[155px]">Mastering the Art of Atra</h2>
+                <blockquote
+                    class="border-l-4 border-blue-500 pl-4 italic text-black-600 text-2xl font-bold text-justify ml-[225px] mr-[180px]">
+                    “Master the art of making Atra — let your originality shine, your style speak, and your story
+                    unfold.”
+                </blockquote>
+                <blockquote
+                    class="border-l-4 border-blue-500 pl-4 italic text-black-600 text-2xl text-justify ml-[225px] mr-[180px]">
+                    The art of making Atra is about giving your creativity a voice — letting your imagination and
+                    individuality shine through. As you shape your vision with original ideas, bold visuals, and refined
+                    storytelling, everything flows like a living canvas. Add your essence, blend form with feeling, and
+                    bring Atra to life. Keep your audience immersed — design the experience, express the identity,
+                    refine the details, and most of all, enjoy the creative journey.
+                </blockquote>
+            </div>
+        </section>
+
+        <!-- Recent Posts Section -->
+        <section class="max-w-6xl mx-auto px-6 py-10 space-y-10 font-serif text-gray-800">
+            <!-- Header -->
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-2xl font-medium">Recent Posts</h2>
+                <a href="BlogsPage.html"
+                    class="text-2xl text-black hover:text-purple-700 hover:underline transition-colors duration-300">See
+                    All</a>
+            </div>
+
+            <!-- Posts Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+
+                <!-- Card 1 -->
+                <div class="border border-black">
+                    <!-- Use padding on wrapper instead of margins on image -->
+                    <div class="p-1 pt-1 pb-0">
+                        <img src="images/blogDetail/recentpost1.1.png" alt="Atriyat's Signature Fragrances"
+                            class="w-full h-[200px] object-cover rounded" />
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold leading-snug text-center">
+                            Atriyat's Signature Fragrances
+                        </h3>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="border border-black">
+                    <div class="p-1 pt-1 pb-0">
+                        <img src="images/blogDetail/recentpost2.jpg" alt="Atriyat's Signature Fragrances"
+                            class="w-full h-[200px] object-cover rounded" />
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold leading-snug text-center">
+                            Atra for Every Occasion
+                        </h3>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="border border-black">
+                    <div class="p-1 pt-1 pb-0">
+                        <img src="images/blogDetail/recentpost3.1.jpg" alt="Atriyat's Signature Fragrances"
+                            class="w-full h-[200px] object-cover rounded" />
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold leading-snug text-center">
+                            Fragrance Notes Explained
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-black text-sm pt-12 pb-6 px-6 bg-soft-footer">
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-8 mb-10">
+            <div>
+                <h3 class="uppercase mb-2 font-bold text-3xl">Customer Service</h3>
+                <ul>
+                    <li class="text-2xl">
+                        <a href="faqs.html" class="hover:underline">FAQs</a>
+                    </li>
+                    <li class="text-2xl">
+                        <a href="fragrance-care.html" class="hover:underline">Fragrance Care</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="uppercase mb-2 font-bold text-3xl">About Atriyat</h3>
+                <ul>
+                    <li class="text-2xl">
+                        <a href="aboutFounder.html" class="hover:underline">About</a>
+                    </li>
+                    <li class="text-2xl">
+                        <a href="workshopPage.html" class="hover:underline">Workshops</a>
+                    </li>
+                    <li class="text-2xl">
+                        <a href="blogPage.html" class="hover:underline">Blogs</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="uppercase mb-2 font-bold text-3xl">Legal</h3>
+                <ul>
+                    <li class="text-2xl">
+                        <a href="blogPage.html" class="hover:underline">Privacy Policy</a>
+                    </li>
+                    <li class="text-2xl">
+                        <a href="blogPage.html" class="hover:underline">Terms & Conditions</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="uppercase mb-2 font-bold text-3xl">Follow Us</h3>
+                <div class="flex gap-4 mt-3">
+                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" class="w-8" /></a>
+                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" class="w-8" /></a>
+                </div>
+            </div>
+            <div>
+                <h3 class="uppercase mb-2 font-bold text-3xl">Newsletter</h3>
+                <p class="text-2xl mb-3">Get early access to collections, offers, and Atra workshops</p>
+                <div class="flex">
+                    <input type="email" placeholder="Enter your email"
+                        class="px-6 py-2 w-full text-2xl border border-gray-200 bg-transparent text-black placeholder-black rounded-l-md focus:outline-none">
+                    <button
+                        class="px-4 py-2 bg-purple-700 text-white uppercase text-xl rounded-r-md hover:bg-purple-900">→</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-lg text-center mt-8">© 2025 Atriyat. All Rights Reserved.</div>
+    </footer>
+
+    <!-- Cart Container -->
+    <div id="cart-container"></div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

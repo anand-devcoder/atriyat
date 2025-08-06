@@ -1,0 +1,33 @@
+<div id="cart-container">
+    <!-- Overlay -->
+    <div id="overlay" class="overlaycart"></div>
+
+    <!-- Cart Sidebar -->
+    <div id="carts" class="cart bg-gradient-to-b from-yellow-100 to-orange-100 text-black">
+        <div class="cart-header">
+            <h2>Shopping Cart</h2>
+            <button id="closeCart" class="close-btn">×</button>
+        </div>
+        <div id="cart-items" class="cart-items"></div>
+        <!-- Empty Cart Message -->
+        <div id="cart-empty-message" style="text-align: center; padding: 40px 20px; display: none;">
+            <img src="images/shoppingCart/Cart.png" alt="Empty Cart"
+                style="width: 120px;  margin-bottom: 15px; margin-left: 120px;">
+            <h2 style="font-size: 1.4rem; font-weight: 600;">Your cart is empty</h2>
+            <p style="font-size: 0.95rem; color: gray;">Let’s fill it up, shall we?</p>
+        </div>
+
+
+        <div id="cart-summary">
+            <div id="subtotal-container">
+                <div 
+                    style="display: flex; border: 1px solid #ccc; background-color: #e6e6e6; justify-content: space-between; align-items: center; font-size: 22px; font-weight: bold; padding: 10px;">
+                    <span>Subtotal</span>
+                    <span id="subtotal">₹1450</span>
+                </div>
+            </div>
+            <button id="checkout-btn" class="checkout-btn">Pay & Checkout</button>
+        </div>
+        <button id="continueShopping" class="continue-btn">Continue Shopping</button>
+    </div>
+</div>

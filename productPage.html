@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atriyat Atras – Manufacturer & Seller</title>
+    <link rel="icon" href="images/atriyat-logo-removebg-preview.png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans&display=swap"
+        rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-white text-black">
+
+    <!-- Navbar -->
+    <nav id="navbar"
+        class="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-purple-50 via-yellow-50 to-orange-50 shadow text-sm">
+        <div class="flex justify-between items-center px-4 py-2">
+            <div class="flex items-center gap-2 hover:text-purple-600 cursor-pointer" id="search-trigger">
+                <svg class="w-7 h-7 text-gray-700" fill="none" stroke="currentColor" stroke-width="2"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M21 21l-4.35-4.35M16 10a6 6 0 11-12 0 6 6 0 0112 0z" />
+                </svg>
+                <span class="text-2xl text-gray-700 hover:text-purple-600">Search</span>
+            </div>
+
+            <div class="flex items-center gap-2">
+                <img src="images/home/flower-1-300x300-removebg-preview.png" alt="Logo" class="w-24 h-20">
+                <span class="text-5xl font-bold text-black-800">ATRIYAT</span>
+            </div>
+
+            <div class="flex items-center gap-5">
+                <svg class="w-7 h-7 text-gray-700 hover:text-purple-600 cursor-pointer" fill="none"
+                    stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M5.121 17.804A9 9 0 0112 15a9 9 0 016.879 2.804M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                <svg class="w-7 h-7 text-gray-700 hover:text-purple-600 cursor-pointer" fill="none"
+                    stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M4.318 6.318A4.5 4.5 0 0112 6.318a4.5 4.5 0 017.682 5.364L12 21l-7.682-9.318a4.5 4.5 0 010-5.364z" />
+                </svg>
+                <svg id="cart-svg-icon" class="w-7 h-7 text-gray-700 hover:text-purple-600 cursor-pointer" fill="none"
+                    stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.5 7.5a1 1 0 001 1.5h12a1 1 0 001-1.5L17 13M7 13H5.4" />
+                </svg>
+            </div>
+        </div>
+
+        <div class="w-full flex justify-center py-2">
+            <ul class="flex gap-8 uppercase text-2xl text-gray-700">
+                <li><a href="index.html" class="hover:text-purple-600 text-purple-600 font-bold">Home</a></li>
+                <li><a href="productPage.html" class="hover:text-purple-600 text-purple-600 font-bold">Fragances</a></li>
+                <li><a href="blogPage.html" class="hover:text-purple-600 text-purple-600 font-bold">Blogs</a></li>
+                <li><a href="workshopPage.html" class="hover:text-purple-600 text-purple-600 font-bold">Workshops</a></li>
+                <li><a href="cYOF_FirstPage.html" class="hover:text-purple-600 text-purple-600 font-bold">CYOF</a></li>
+                <li><a href="aboutFounder.html" class="hover:text-purple-600 text-purple-600 font-bold">About Us</a></li>
+                <li><a href="contactUs.html" class="hover:text-purple-600 text-purple-600 font-bold">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Search Overlay -->
+    <div id="search-box" class="search-box bg-gradient-to-r from-purple-50 via-yellow-50 to-orange-50">
+        <div class="search-content">
+            <div class="close-btn" id="close-search">✖</div>
+            <h2 class="text-xl text-gray-600 uppercase tracking-widest mb-2">What are you looking for?</h2>
+            <div class="relative w-full ">
+                <!-- Input field -->
+                <input type="text"
+                    class="search-input bg-transparent w-full text-gray-800 placeholder-gray-600 pr-10 pl-4 py-2 rounded-md border-b border-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-300"
+                    placeholder="Search..." />
+
+                <!-- SVG Icon (Search) -->
+                <svg class="w-5 h-5 absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-600 pointer-events-none"
+                    fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M21 21l-4.35-4.35M16 10a6 6 0 11-12 0 6 6 0 0112 0z" />
+                </svg>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- FRAGRANCES SECTION -->
+    <section class="pt-32 bg-white text-black bg-gradient-to-b from-purple-300 to-yellow-100">
+        <div class="mt-0 pt-0 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <!-- Image -->
+            <div>
+                <img src="images/product/ai-generated-luxury-perfume-bottle-scented-liquid-elegance-in-a-spray-generated-by-ai-free-photo.jpg"
+                    alt="Perfume Bottle" class="w-[1200px] h-[300px] object-cover rounded shadow-md">
+            </div>
+
+            <!-- Text Content -->
+            <div class="h-[300px] overflow-y-auto pt-8 px-6">
+                <h2 class="text-5xl font-bold mb-6">FRAGRANCES</h2>
+                <p class="text-2xl leading-relaxed">
+                    Fragrance is a blend of natural and synthetic scents used to create pleasing aromas in perfumes and
+                    other products. It consists of top, middle, and base notes, which evolve over time to provide a
+                    unique scent experience. The balance of these notes defines the fragrance’s character and its
+                    lasting impression.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sidebar Filter & Product Grid Section -->
+    <section class="flex flex-col md:flex-row py-5 gap-10 bg-gradient-to-b from-yellow-100 to-orange-100 text-black">
+
+        <!-- Sidebar Filter Section -->
+        <section class="w-full md:w-1/4 space-y-6 border-r border-black pr-4">
+            <!-- SORT BY (Dropdown) -->
+            <div class="filter-section w-full max-w-sm mx-auto">
+                <button class="dropdown-btn w-full flex justify-between items-center font-bold text-2xl mb-2 py-2">
+                    SORT BY
+                    <span class="dropdown-icon transform transition-transform">&#9660;</span>
+                </button>
+                <div class="dropdown-content space-y-2 text-2xl px-4 pb-2 hidden">
+                    <label class="flex items-center gap-2"><input type="radio" name="sort" /> Price Low to High</label>
+                    <label class="flex items-center gap-2"><input type="radio" name="sort" /> Price High to Low</label>
+                    <label class="flex items-center gap-2"><input type="radio" name="sort" /> Recommended</label>
+                </div>
+            </div>
+
+            <!-- SELECTION FOR (Dropdown) -->
+            <div class="filter-section w-full max-w-sm mx-auto">
+                <button class="dropdown-btn w-full flex justify-between items-center font-bold text-2xl mb-2 py-2">
+                    SELECTION FOR
+                    <span class="dropdown-icon transform transition-transform">&#9660;</span>
+                </button>
+                <div class="dropdown-content space-y-2 text-2xl px-4 pb-2 hidden">
+                    <label class="flex items-center gap-2"><input type="checkbox" /> Her</label>
+                    <label class="flex items-center gap-2"><input type="checkbox" /> Him</label>
+                </div>
+            </div>
+
+            <!-- CATEGORY (Dropdown) -->
+            <div class="filter-section w-full max-w-sm mx-auto">
+                <button class="dropdown-btn w-full flex justify-between items-center font-bold text-2xl mb-2 py-2">
+                    CATEGORY
+                    <span class="dropdown-icon transform transition-transform">&#9660;</span>
+                </button>
+                <div class="dropdown-content space-y-2 text-2xl px-4 pb-2 hidden">
+
+                    <!-- Fragrance -->
+                    <label class="flex items-center gap-2">
+                        <input type="checkbox" class="fragrance-checkbox" /> Fragrance
+                    </label>
+                    <div class="fragrance-submenu hidden pl-8 space-y-2 text-2xl">
+                        <label class="flex items-center gap-2"><input type="checkbox" /> Woody</label>
+                        <label class="flex items-center gap-2"><input type="checkbox" /> Citrus</label>
+                        <label class="flex items-center gap-2"><input type="checkbox" /> Floral</label>
+                    </div>
+
+                    <!-- Warth -->
+                    <label class="flex items-center gap-2">
+                        <input type="checkbox" class="warth-checkbox" /> Warmth
+                    </label>
+                    <div class="warth-submenu hidden pl-8 space-y-2 text-2xl">
+                        <label class="flex items-center gap-2"><input type="checkbox" /> Spicy</label>
+                        <label class="flex items-center gap-2"><input type="checkbox" /> Earthy</label>
+                    </div>
+
+                    <!-- Source -->
+                    <label class="flex items-center gap-2">
+                        <input type="checkbox" class="source-checkbox" /> Source
+                    </label>
+                    <div class="source-submenu hidden pl-8 space-y-2 text-2xl">
+                        <label class="flex items-center gap-2"><input type="checkbox" /> Natural</label>
+                        <label class="flex items-center gap-2"><input type="checkbox" /> Synthetic</label>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- COLLECTION (Dropdown) -->
+            <div class="filter-section w-full max-w-sm mx-auto">
+                <button class="dropdown-btn w-full flex justify-between items-center font-bold text-2xl mb-2 py-2">
+                    COLLECTION
+                    <span class="dropdown-icon transform transition-transform">&#9660;</span>
+                </button>
+                <div class="dropdown-content space-y-2 text-2xl px-4 pb-2 hidden">
+                    <label class="flex items-center gap-2"><input type="checkbox" /> ROSA GALORE</label>
+                    <label class="flex items-center gap-2"><input type="checkbox" /> PERSIAN GOLD</label>
+                    <label class="flex items-center gap-2"><input type="checkbox" /> CRYSTAL LOVE FOR HER</label>
+                    <label class="flex items-center gap-2"><input type="checkbox" /> AREEJ</label>
+                    <label class="flex items-center gap-2"><input type="checkbox" /> AZALEA</label>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Grid Section -->
+        <section class="w-full md:w-4/5 lg:w-3/4 xl:w-2/3 mx-auto px-4">
+            <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Product Card 1 -->
+                <a href="productDetailPage.html" class="block">
+                    <div
+                        class="relative p-4 group transition duration-130 border border-transparent hover:border-black">
+                        <button class="absolute top-2 right-2 text-gray-600 hover:text-red-500 text-xl">♡</button>
+                        <img src="images/product/glass-perfume-bottle-golden-cap-600nw-2591229857.webp" alt="MONTE ROSA"
+                            class="product-image w-full h-64 object-contain" />
+                        <div class="text-center mt-4 group-hover:border-t-2 group-hover:border-black text-2xl">
+                            <h4 class="product-name font-bold tracking-wide">MONTE ROSA</h4>
+                            <p class="product-desc text-xl text-gray-600">Roche Noire Eau de</p>
+                            <p class="product-price font-semibold mt-1">₹1499</p>
+                        </div>
+                        <button
+                            class="mt-4 w-full bg-black text-white py-2 text-xl font-semibold uppercase tracking-wide hidden group-hover:block add-to-cart-btn">
+                            Add To Cart
+                        </button>
+                    </div>
+                </a>
+
+
+                <!-- Product Card 2 -->
+                <a href="productDetailPage.html" class="block">
+                    <div
+                        class="relative p-4 group transition duration-130 border border-transparent hover:border-black">
+                        <button class="absolute top-2 right-2 text-gray-600 hover:text-red-500 text-xl">♡</button>
+                        <img src="images/product/After_Shave.jpg" alt="Park Avenue"
+                            class="product-image w-full h-64 object-contain" />
+                        <div class="text-center mt-4 group-hover:border-t-2 group-hover:border-black text-2xl">
+                            <h4 class="product-name font-bold tracking-wide">Park Avenue</h4>
+                            <p class="product-desc text-xl text-gray-600">Luxury Perfume</p>
+                            <p class="product-price font-semibold mt-1">₹399</p>
+                        </div>
+                        <button
+                            class="mt-4 w-full bg-black text-white py-2 text-xl font-semibold uppercase tracking-wide hidden group-hover:block add-to-cart-btn">
+                            Add To Cart
+                        </button>
+                    </div>
+                </a>
+
+                <!-- Product Card 3 -->
+                <a href="productDetailPage.html" class="block">
+                    <div
+                        class="relative p-4 group transition duration-130 border border-transparent hover:border-black">
+                        <button class="absolute top-2 right-2 text-gray-600 hover:text-red-500 text-xl">♡</button>
+                        <img src="images/product/advertising-product-photo-set-design-600nw-2449464157.webp"
+                            alt="BELLAVITA CEO Man" class="product-image w-full h-64 object-contain" />
+                        <div class="text-center mt-4 group-hover:border-t-2 group-hover:border-black text-2xl">
+                            <h4 class="product-name font-bold tracking-wide">BELLAVITA CEO Man</h4>
+                            <p class="product-desc text-xl text-gray-600">Long Lasting Perfume</p>
+                            <p class="product-price font-semibold mt-1">₹199</p>
+                        </div>
+                        <button
+                            class="mt-4 w-full bg-black text-white py-2 text-xl font-semibold uppercase tracking-wide hidden group-hover:block add-to-cart-btn">
+                            Add To Cart
+                        </button>
+                    </div>
+                </a>
+
+                <!-- Product Card 4 -->
+                <a href="productDetailPage.html" class="block">
+                    <div
+                        class="relative p-4 group transition duration-130 border border-transparent hover:border-black">
+                        <button class="absolute top-2 right-2 text-gray-600 hover:text-red-500 text-xl">♡</button>
+                        <img src="images/product/file.jpg" alt="BELLAVITA White Oud"
+                            class="product-image w-full h-64 object-contain" />
+                        <div class="text-center mt-4 group-hover:border-t-2 group-hover:border-black text-2xl">
+                            <h4 class="product-name font-bold tracking-wide">BELLAVITA White Oud</h4>
+                            <p class="product-desc text-xl text-gray-600">Long Lasting Perfume</p>
+                            <p class="product-price font-semibold mt-1">₹199</p>
+                        </div>
+                        <button
+                            class="mt-4 w-full bg-black text-white py-2 text-xl font-semibold uppercase tracking-wide hidden group-hover:block add-to-cart-btn">
+                            Add To Cart
+                        </button>
+                    </div>
+                </a>
+
+                <!-- Product Card 5 -->
+                <a href="productDetailPage.html" class="block">
+                    <div
+                        class="relative p-4 group transition duration-130 border border-transparent hover:border-black">
+                        <button class="absolute top-2 right-2 text-gray-600 hover:text-red-500 text-xl">♡</button>
+                        <img src="images/product/glass-perfume-bottle-golden-cap-600nw-2591229857.webp" alt="MONTE ROSA"
+                            class="product-image w-full h-64 object-contain" />
+                        <div class="text-center mt-4 group-hover:border-t-2 group-hover:border-black text-2xl">
+                            <h4 class="product-name font-bold tracking-wide">MONTE ROSA</h4>
+                            <p class="product-desc text-xl text-gray-600">Roche Noire Eau de</p>
+                            <p class="product-price font-semibold mt-1">₹1499</p>
+                        </div>
+                        <button
+                            class="mt-4 w-full bg-black text-white py-2 text-xl font-semibold uppercase tracking-wide hidden group-hover:block add-to-cart-btn">
+                            Add To Cart
+                        </button>
+                    </div>
+                </a>
+
+                <!-- Product Card 6 -->
+                <a href="productDetailPage.html" class="block">
+                    <div
+                        class="relative p-4 group transition duration-130 border border-transparent hover:border-black">
+                        <button class="absolute top-2 right-2 text-gray-600 hover:text-red-500 text-xl">♡</button>
+                        <img src="images/product/advertising-product-photo-set-design-600nw-2449464157.webp"
+                            alt="BELLAVITA White Oud" class="product-image w-full h-64 object-contain" />
+                        <div class="text-center mt-4 group-hover:border-t-2 group-hover:border-black text-2xl">
+                            <h4 class="product-name font-bold tracking-wide">BELLAVITA White Oud</h4>
+                            <p class="product-desc text-xl text-gray-600">Long Lasting Perfume</p>
+                            <p class="product-price font-semibold mt-1">₹199</p>
+                        </div>
+                        <button
+                            class="mt-4 w-full bg-black text-white py-2 text-xl font-semibold uppercase tracking-wide hidden group-hover:block add-to-cart-btn">
+                            Add To Cart
+                        </button>
+                    </div>
+                </a>
+
+                <!-- Product Card 7 -->
+                <a href="productDetailPage.html" class="block">
+                    <div
+                        class="relative p-4 group transition duration-130 border border-transparent hover:border-black">
+                        <button class="absolute top-2 right-2 text-gray-600 hover:text-red-500 text-xl">♡</button>
+                        <img src="images/product/file.jpg" alt="Park Avenue"
+                            class="product-image w-full h-64 object-contain" />
+                        <div class="text-center mt-4 group-hover:border-t-2 group-hover:border-black text-2xl">
+                            <h4 class="product-name font-bold tracking-wide">Park Avenue</h4>
+                            <p class="product-desc text-xl text-gray-600">Luxury Perfume</p>
+                            <p class="product-price font-semibold mt-1">₹399</p>
+                        </div>
+                        <button
+                            class="mt-4 w-full bg-black text-white py-2 text-xl font-semibold uppercase tracking-wide hidden group-hover:block add-to-cart-btn">
+                            Add To Cart
+                        </button>
+                    </div>
+                </a>
+
+                <!-- Product Card 8 -->
+                <a href="productDetailPage.html" class="block">
+                    <div
+                        class="relative p-4 group transition duration-130 border border-transparent hover:border-black">
+                        <button class="absolute top-2 right-2 text-gray-600 hover:text-red-500 text-xl">♡</button>
+                        <img src="images/product/After_Shave.jpg" alt="BELLAVITA CEO Man"
+                            class="product-image w-full h-64 object-contain" />
+                        <div class="text-center mt-4 group-hover:border-t-2 group-hover:border-black text-2xl">
+                            <h4 class="product-name font-bold tracking-wide">BELLAVITA CEO Man</h4>
+                            <p class="product-desc text-xl text-gray-600">Long Lasting Perfume</p>
+                            <p class="product-price font-semibold mt-1">₹199</p>
+                        </div>
+                        <button
+                            class="mt-4 w-full bg-black text-white py-2 text-xl font-semibold uppercase tracking-wide hidden group-hover:block add-to-cart-btn">
+                            Add To Cart
+                        </button>
+                    </div>
+                </a>
+
+                <!-- Product Card 9 -->
+                <a href="productDetailPage.html" class="block">
+                    <div
+                        class="relative p-4 group transition duration-130 border border-transparent hover:border-black">
+                        <button class="absolute top-2 right-2 text-gray-600 hover:text-red-500 text-xl">♡</button>
+                        <img src="images/product/glass-perfume-bottle-golden-cap-600nw-2591229857.webp"
+                            alt="BELLAVITA CEO Man" class="product-image w-full h-64 object-contain" />
+                        <div class="text-center mt-4 group-hover:border-t-2 group-hover:border-black text-2xl">
+                            <h4 class="product-name font-bold tracking-wide">BELLAVITA CEO Man</h4>
+                            <p class="product-desc text-xl text-gray-600">Long Lasting Perfume</p>
+                            <p class="product-price font-semibold mt-1">₹199</p>
+                        </div>
+                        <button
+                            class="mt-4 w-full bg-black text-white py-2 text-xl font-semibold uppercase tracking-wide hidden group-hover:block add-to-cart-btn">
+                            Add To Cart
+                        </button>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Load More Button -->
+            <div class="col-span-1 sm:col-span-2 lg:col-span-3 flex justify-center mt-8">
+                <button id="load-more-btn" class="loadmore-btn text-2xl">
+                    Load More
+                </button>
+            </div>
+        </section>
+
+    </section>
+
+    <!-- Cart Container -->
+    <div id="cart-container"></div>
+
+    <!-- Footer -->
+    <footer class="text-black text-sm pt-12 pb-6 px-6 bg-soft-footer">
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-8 mb-10">
+            <div>
+                <h3 class="uppercase mb-2 font-bold text-3xl">Customer Service</h3>
+                <ul>
+                    <li class="text-2xl">
+                        <a href="faqs.html" class="hover:underline">FAQs</a>
+                    </li>
+                    <li class="text-2xl">
+                        <a href="fragrance-care.html" class="hover:underline">Fragrance Care</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="uppercase mb-2 font-bold text-3xl">About Atriyat</h3>
+                <ul>
+                    <li class="text-2xl">
+                        <a href="aboutFounder.html" class="hover:underline">About</a>
+                    </li>
+                    <li class="text-2xl">
+                        <a href="workshopPage.html" class="hover:underline">Workshops</a>
+                    </li>
+                    <li class="text-2xl">
+                        <a href="blogPage.html" class="hover:underline">Blogs</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="uppercase mb-2 font-bold text-3xl">Legal</h3>
+                <ul>
+                    <li class="text-2xl">
+                        <a href="blogPage.html" class="hover:underline">Privacy Policy</a>
+                    </li>
+                    <li class="text-2xl">
+                        <a href="blogPage.html" class="hover:underline">Terms & Conditions</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="uppercase mb-2 font-bold text-3xl">Follow Us</h3>
+                <div class="flex gap-4 mt-3">
+                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" class="w-8" /></a>
+                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" class="w-8" /></a>
+                </div>
+            </div>
+            <div>
+                <h3 class="uppercase mb-2 font-bold text-3xl">Newsletter</h3>
+                <p class="text-2xl mb-3">Get early access to collections, offers, and Atra workshops</p>
+                <div class="flex">
+                    <input type="email" placeholder="Enter your email"
+                        class="px-6 py-2 w-full text-2xl border border-gray-200 bg-transparent text-black placeholder-black rounded-l-md focus:outline-none">
+                    <button
+                        class="px-4 py-2 bg-purple-700 text-white uppercase text-xl rounded-r-md hover:bg-purple-900">→</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-lg text-center mt-8">© 2025 Atriyat. All Rights Reserved.</div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

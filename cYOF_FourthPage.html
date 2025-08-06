@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atriyat Atras – Manufacturer & Seller</title>
+    <link rel="icon" href="images/atriyat-logo-removebg-preview.png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans&display=swap"
+        rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-white text-black" style="min-height: 150vh; display: flex; flex-direction: column;">
+
+    <!-- Navbar -->
+    <nav id="navbar"
+        class="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-purple-50 via-yellow-50 to-orange-50 shadow text-sm">
+        <div class="flex justify-between items-center px-4 py-2">
+            <div class="flex items-center gap-2 hover:text-purple-600 cursor-pointer" id="search-trigger">
+                <svg class="w-7 h-7 text-gray-700" fill="none" stroke="currentColor" stroke-width="2"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M21 21l-4.35-4.35M16 10a6 6 0 11-12 0 6 6 0 0112 0z" />
+                </svg>
+                <span class="text-2xl text-gray-700 hover:text-purple-600">Search</span>
+            </div>
+
+            <div class="flex items-center gap-2">
+                <img src="images/home/flower-1-300x300-removebg-preview.png" alt="Logo" class="w-24 h-20">
+                <span class="text-5xl font-bold text-black-800">ATRIYAT</span>
+            </div>
+
+            <div class="flex items-center gap-5">
+                <svg class="w-7 h-7 text-gray-700 hover:text-purple-600 cursor-pointer" fill="none"
+                    stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M5.121 17.804A9 9 0 0112 15a9 9 0 016.879 2.804M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                <svg class="w-7 h-7 text-gray-700 hover:text-purple-600 cursor-pointer" fill="none"
+                    stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M4.318 6.318A4.5 4.5 0 0112 6.318a4.5 4.5 0 017.682 5.364L12 21l-7.682-9.318a4.5 4.5 0 010-5.364z" />
+                </svg>
+                <svg id="cart-svg-icon" class="w-7 h-7 text-gray-700 hover:text-purple-600 cursor-pointer" fill="none"
+                    stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.5 7.5a1 1 0 001 1.5h12a1 1 0 001-1.5L17 13M7 13H5.4" />
+                </svg>
+            </div>
+        </div>
+
+        <div class="w-full flex justify-center py-2">
+            <ul class="flex gap-8 uppercase text-2xl text-gray-700">
+                <li><a href="index.html" class="hover:text-purple-600 text-purple-600 font-bold">Home</a></li>
+                <li><a href="productPage.html" class="hover:text-purple-600 text-purple-600 font-bold">Fragances</a></li>
+                <li><a href="blogPage.html" class="hover:text-purple-600 text-purple-600 font-bold">Blogs</a></li>
+                <li><a href="workshopPage.html" class="hover:text-purple-600 text-purple-600 font-bold">Workshops</a></li>
+                <li><a href="cYOF_FirstPage.html" class="hover:text-purple-600 text-purple-600 font-bold">CYOF</a></li>
+                <li><a href="aboutFounder.html" class="hover:text-purple-600 text-purple-600 font-bold">About Us</a></li>
+                <li><a href="contactUs.html" class="hover:text-purple-600 text-purple-600 font-bold">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Search Overlay -->
+    <div id="search-box" class="search-box bg-gradient-to-r from-purple-50 via-yellow-50 to-orange-50">
+        <div class="search-content">
+            <div class="close-btn" id="close-search">✖</div>
+            <h2 class="text-xl text-gray-600 uppercase tracking-widest mb-2">What are you looking for?</h2>
+            <div class="relative w-full ">
+                <!-- Input field -->
+                <input type="text"
+                    class="search-input bg-transparent w-full text-gray-800 placeholder-gray-600 pr-10 pl-4 py-2 rounded-md border-b border-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-300"
+                    placeholder="Search..." />
+
+                <!-- SVG Icon (Search) -->
+                <svg class="w-5 h-5 absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-600 pointer-events-none"
+                    fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M21 21l-4.35-4.35M16 10a6 6 0 11-12 0 6 6 0 0112 0z" />
+                </svg>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- CYOF Final Page - Summary -->
+    <section class="bg-gradient-to-b from-yellow-100 to-orange-100 text-black py-12" style="min-height: 90vh;">
+        <div style="max-width: 1000px; margin: auto; padding-left: 40px;">
+
+            <!-- Main Heading -->
+            <h1 class="text-5xl font-semibold mb-10 text-center uppercase" style="margin-top: 150px;">
+                Create Your Own Fragrance
+            </h1>
+
+            <!-- Summary Section -->
+            <h2 class="text-3xl font-semibold mb-6" style="margin-left: -100px;">Summary</h2>
+            <div id="summaryData"
+                style="border: 2px dashed #999; border-radius: 10px; padding: 20px; background-color: #fff9e6; font-size: 18px; line-height: 1.6; margin-bottom: 40px;">
+                <!-- JS will populate this section -->
+            </div>
+
+            <!-- Navigation Buttons -->
+            <div class="flex justify-between mt-8">
+                <button onclick="goToPreviousPage('cYOF_ThirdPage.html')" class="nav-btn">Previous</button>
+                <button class="nav-btn" onclick="getQuote()">Get Quote</button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-black text-sm pt-12 pb-6 px-6 bg-soft-footer">
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-8 mb-10">
+            <div>
+                <h3 class="uppercase mb-2 font-bold text-3xl">Customer Service</h3>
+                <ul>
+                    <li class="text-2xl">
+                        <a href="faqs.html" class="hover:underline">FAQs</a>
+                    </li>
+                    <li class="text-2xl">
+                        <a href="fragrance-care.html" class="hover:underline">Fragrance Care</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="uppercase mb-2 font-bold text-3xl">About Atriyat</h3>
+                <ul>
+                    <li class="text-2xl">
+                        <a href="aboutFounder.html" class="hover:underline">About</a>
+                    </li>
+                    <li class="text-2xl">
+                        <a href="workshopPage.html" class="hover:underline">Workshops</a>
+                    </li>
+                    <li class="text-2xl">
+                        <a href="blogPage.html" class="hover:underline">Blogs</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="uppercase mb-2 font-bold text-3xl">Legal</h3>
+                <ul>
+                    <li class="text-2xl">
+                        <a href="blogPage.html" class="hover:underline">Privacy Policy</a>
+                    </li>
+                    <li class="text-2xl">
+                        <a href="blogPage.html" class="hover:underline">Terms & Conditions</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="uppercase mb-2 font-bold text-3xl">Follow Us</h3>
+                <div class="flex gap-4 mt-3">
+                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" class="w-8" /></a>
+                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" class="w-8" /></a>
+                </div>
+            </div>
+            <div>
+                <h3 class="uppercase mb-2 font-bold text-3xl">Newsletter</h3>
+                <p class="text-2xl mb-3">Get early access to collections, offers, and Atra workshops</p>
+                <div class="flex">
+                    <input type="email" placeholder="Enter your email"
+                        class="px-6 py-2 w-full text-2xl border border-gray-200 bg-transparent text-black placeholder-black rounded-l-md focus:outline-none">
+                    <button
+                        class="px-4 py-2 bg-purple-700 text-white uppercase text-xl rounded-r-md hover:bg-purple-900">→</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-lg text-center mt-8">© 2025 Atriyat. All Rights Reserved.</div>
+    </footer>
+
+    <!-- Cart Container -->
+    <div id="cart-container"></div>
+    <script src="js/cyof4.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
